@@ -23,7 +23,7 @@ export function getUrl(name:string):string{
   if(CandidateURL.contains(name)){
     return CandidateURL.getSome(name)
   }else{
-    logging.log(`can't find that user`)
+    logging.log(`can't find that candidate`)
     return ''
   }
 }
