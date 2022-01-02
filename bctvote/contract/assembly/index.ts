@@ -1,8 +1,11 @@
-
+// importing environment features from NEAR
+// logging is for appending to the execution environment log( web console )
+// data structure that wraps storage to appear like a Map and uses key pairs; it has functions like contain, set, get, getsome, delete
 
 import {  logging, PersistentMap} from 'near-sdk-as'
 
 
+//creation of essential data structures for the smart contract methods and trasactions of this project
 const CandidateURL=new PersistentMap<string,string>("CandidateURL");
 const CandidatePair=new PersistentMap<string,string[]>("Candidate Pair");
 const PromptArray= new PersistentMap<string,string[]>("array of prompts ");
@@ -14,9 +17,9 @@ const userParticipation = new PersistentMap<string,string[]>('user Participation
 
 
 
-// View Methods
+// Read Methods
 // Does not change state of the blockchain 
-// Does not incur a fee
+// Does not incur a gas fee
 // Pulls and reads information from blockchain  
 
 export function getUrl(name:string):string{
@@ -68,7 +71,7 @@ export function getCandidatePair(prompt:string):string[]{
   }
 }
 
-// Change Methods 
+// Write Methods 
 // Changes state of Blockchain 
 // Costs a transaction fee to do so 
 // Adds or modifies information to blockchain
