@@ -1,6 +1,7 @@
 // importing environment features from NEAR
 // logging is for appending to the execution environment log( web console )
-// data structure that wraps storage to appear like a Map and uses key pairs; it has functions like contain, set, get, getsome, delete
+// data structure that wraps storage to appear like a Map and uses key pairs; 
+//it has functions like contain, set, get, getsome, delete
 
 import {  logging, PersistentMap} from 'near-sdk-as'
 
